@@ -7,7 +7,25 @@ Description: Тема-оболочка для контент-секций.
 Version: 1.0
 
 */
+.block-wrapper.block-html {
+    position: relative;
+    padding-bottom: 56.25%; /* соотношение сторон 16:9 */
+    height: 0;
+}
 
+.block-wrapper.block-html iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .block-wrapper.block-html {
+        padding-bottom: 75%; /* соотношение сторон 4:3 для мобильных устройств */
+    }
+}
 body {
     font-family: 'Roboto';
     font-size: 14px;
